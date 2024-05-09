@@ -55,20 +55,27 @@
             </li>
           </ul>
         </address>
+        <button class="button-header-menu" type="button">
+          <svg class="button-header-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
-      <section class="section-title">
+      <section class="section-title hidden">
         <div class="container container-hero">
           <h1 class="title">Effective Solutions for Your Business</h1>
-          <button class="button" type="button">Order Service</button>
+          <button class="button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
       <!--=================section-Advantages====================-->
 
-      <section class="section-advantages padding-section">
+      <section class="section-advantages padding-section hidden">
         <div class="container container-advanages">
           <h2 class="visually-hidden">advantages</h2>
           <ul class="advantages-list">
@@ -129,7 +136,7 @@
 
       <!--==================section Our Team=====================-->
 
-      <section class="section-our-time">
+      <section class="section-our-time hidden">
         <div class="container container-our-team">
           <h2 class="h-two-title">Our Team</h2>
           <ul class="our-time-list">
@@ -318,7 +325,7 @@
 
       <!--===================Our Portfolio section==================-->
 
-      <section class="section-our-portfolio">
+      <section class="section-our-portfolio hidden">
         <div class="container portfolio-container">
           <h2 class="h-two-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -449,7 +456,7 @@
 
     <!--============================= FOOTER ============================-->
 
-    <footer class="footer">
+    <footer class="footer hidden">
       <div class="container footer-text-social">
         <div class="footer-text">
           <a class="logo-web" href="./index.html"
@@ -522,9 +529,9 @@
 
     <!--====================== MODAL-FORM ===============-->
 
-    <div class="backdrop">
+    <div class="backdrop hidden" data-modal>
       <div class="modal">
-        <button class="modal-close-btn" type="button">
+        <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="image-close-modal-btn" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -618,5 +625,8 @@
         </form>
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -535,4 +535,44 @@ body {
   }
 }
 
+==================== ГУМОВЕ ЗОБРАЖЕННЯ ================================
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+===================== РЕСПОНСИВІ ЗОБРАЖЕННЯ =======================
+
+<img srcset="./img/photo.jpg 1x, ./img/photo@2x.jpg 2x" />
+
+<img
+  srcset="./img/photo.jpg 1x, ./img/photo@2x.jpg 2x"
+  src="./img/photo.jpg"
+  alt="Опис зображення для всіх версій"
+/>
+
+====================== ФОНОВІ ЗОБРАЖЕННЯ ===========================
+
+.box {
+  width: 200px;
+  height: 300px;
+  background-image: url('photo.png');
+  background-size: 200px 300px;
+}
+
+.box {
+  background-image: url('photo.png');
+  background-size: cover;
+}
+
+/* Перевизначаємо шлях до зображення
+   якщо щільність екрана як мінімум 2x */
+
+@media (min-resolution: 192dpi) {
+  .box {
+    background-image: url('photo@2x.png');
+  }
+}
+
 -->
